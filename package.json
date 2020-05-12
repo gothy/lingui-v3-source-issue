@@ -1,0 +1,46 @@
+{
+  "name": "lingui-v3-source-issue",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "extractTrans": "lingui extract",
+    "compileTrans": "lingui compile"
+  },
+  "dependencies": {
+    "@lingui/core": "^3.0.0-11",
+    "@lingui/react": "^3.0.0-11",
+    "next": "9.4.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
+  },
+  "devDependencies": {
+    "@lingui/cli": "^3.0.0-11",
+    "@lingui/loader": "^3.0.0-11",
+    "@lingui/macro": "^3.0.0-11",
+    "babel-plugin-macros": "^2.8.0"
+  },
+  "lingui": {
+    "locales": [
+      "en",
+      "ru",
+      "uk"
+    ],
+    "sourceLocale": "en",
+    "catalogs": [
+      {
+        "path": "<rootDir>/locale/{locale}/messages",
+        "include": [
+          "<rootDir>"
+        ],
+        "exclude": [
+          ".next",
+          "bin/",
+          "**/node_modules/**"
+        ]
+      }
+    ]
+  }
+}
